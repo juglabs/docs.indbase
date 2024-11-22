@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Issues - Indbase</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Issues";
+        var mkdocs_page_input_path = "paas/issues/paas-issues.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Indbase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Paas</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/paas-basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Issues</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../../nice-articles.md">URLs</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Indbase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Paas</li>
+      <li class="breadcrumb-item active">Issues</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="header2">Header2</h2>
+<p>Problems with Cloud Service Providers - AWS, GCP etc</p>
+<ul>
+<li>Stripe in its initial days was engaging 20% of their engineering team on managing AWS infrastructure. Its about the same in other 
+companies also</li>
+<li>Stripe back in 2016 was still not using Kubernetes</li>
+<li>AWS is like, look we give you these legos, you build whatever you want! </li>
+<li>But the QUESTION is, once these applications on PaaS scale, it begins HARD TO DEBUG. So how do you deal with that?<ul>
+<li>Your platform should expose right kind of primitives, but it doesn't have to expose all fo them at the same time, and all 
+    of them in the same way. </li>
+<li>Platform should have PRIVATE NETWORKING built in, SERVICE DISCOVERY built in<ul>
+<li>Every application on the platform gets both a public address and private address - databases, managed data stores etc</li>
+<li>Network Isolation as a feature, isolate development/staging/production environments from each other from a network standpoint of view
+    with a single click</li>
+</ul>
+</li>
+<li>Ultimately it really comes down to being INCREDIBLY CLOSE to your customers who are scaling on the platform - AWS-NETFLIX analogy</li>
+</ul>
+</li>
+</ul>
+<p>User Experience
+- Lot of IN-PRODUCT GUIDANCE
+- Information architecture work
+- Lot of design, UI/UX 
+- Lot of sensible defaults
+- Customer feedback
+- Good logs, Good Documents, Good Error Messageas are key</p>
+<p>KUBERNETES
+- Kubernetes does a good job with container orchestration
+- Problem with K8 - surface area of K8 is massive - even to do a simple thing you have to understand 10 different concepts
+- Give people the flexibility of Kubernetes without having to understand things </p>
+<p>Things to take care
+- As your product becomes popular, DDoS attacks become common - and not just at the HTTP layer, but at L4 as well, at the TCP layer
+- So if you are dealing with bare metal, then you have to work about L3,L4, application level attacks
+- So RENDER didn't do bare metal, they use AWS, GCP, CloudFlare because they've dealt with these problems before</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../basics/paas-basics/" class="btn btn-neutral float-left" title="Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../basics/paas-basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
