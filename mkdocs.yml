@@ -1,0 +1,10 @@
+site_name: Indbase
+nav:
+  - Home: index.md
+  - About: about.md
+  - PaaS:
+    - Basics: paas/basics/paas-basics.md
+    - Issues: paas/issues/paas-issues.md
+    - URLs: paas/url.md
+theme:
+  name: readthedocs

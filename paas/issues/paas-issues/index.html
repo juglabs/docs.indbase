@@ -47,7 +47,7 @@
                 <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">PaaS</span></p>
+              <p class="caption"><span class="caption-text">Paas</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../../basics/paas-basics/">Basics</a>
                   </li>
@@ -63,7 +63,7 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../../url.md">URLs</a>
+                  <li class="toctree-l1"><a class="" href="../../../nice-articles.md">URLs</a>
                   </li>
               </ul>
       </div>
@@ -80,7 +80,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">PaaS</li>
+          <li class="breadcrumb-item">Paas</li>
       <li class="breadcrumb-item active">Issues</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -93,14 +93,17 @@
                 <h1 id="issues-to-keep-track">Issues to keep track</h1>
 <h2 id="problems-with-cloud-service-providers-aws-gcp-etc">Problems with Cloud Service Providers - AWS, GCP etc</h2>
 <ul>
-<li>Stripe in its initial days was engaging 20% of their engineering team on managing AWS infrastructure. Its about the same in other companies also</li>
+<li>Stripe in its initial days was engaging 20% of their engineering team on managing AWS infrastructure. Its about the same in other 
+companies also</li>
 <li>Stripe back in 2016 was still not using Kubernetes</li>
-<li>AWS is like, look we give you these legos, you build whatever you want!</li>
+<li>AWS is like, look we give you these legos, you build whatever you want! </li>
 <li>But the QUESTION is, once these applications on PaaS scale, it begins HARD TO DEBUG. So how do you deal with that?<ul>
-<li>Your platform should expose right kind of primitives, but it doesn't have to expose all fo them at the same time, and all of them in the same way.</li>
+<li>Your platform should expose right kind of primitives, but it doesn't have to expose all fo them at the same time, and all 
+    of them in the same way. </li>
 <li>Platform should have PRIVATE NETWORKING built in, SERVICE DISCOVERY built in<ul>
 <li>Every application on the platform gets both a public address and private address - databases, managed data stores etc</li>
-<li>Network Isolation as a feature, isolate development/staging/production environments from each other from a network standpoint of view with a single click</li>
+<li>Network Isolation as a feature, isolate development/staging/production environments from each other from a network standpoint of view
+    with a single click</li>
 </ul>
 </li>
 <li>Ultimately it really comes down to being INCREDIBLY CLOSE to your customers who are scaling on the platform - AWS-NETFLIX analogy</li>
@@ -111,7 +114,7 @@
 <ul>
 <li>Lot of IN-PRODUCT GUIDANCE</li>
 <li>Information architecture work</li>
-<li>Lot of design, UI/UX</li>
+<li>Lot of design, UI/UX </li>
 <li>Lot of sensible defaults</li>
 <li>Customer feedback</li>
 <li>Good logs, Good Documents, Good Error Messageas are key</li>
@@ -120,7 +123,7 @@
 <ul>
 <li>Kubernetes does a good job with container orchestration</li>
 <li>Problem with K8 - surface area of K8 is massive - even to do a simple thing you have to understand 10 different concepts</li>
-<li>Give people the flexibility of Kubernetes without having to understand things</li>
+<li>Give people the flexibility of Kubernetes without having to understand things </li>
 </ul>
 <h2 id="things-to-take-care-security">Things to take care - Security</h2>
 <ul>
