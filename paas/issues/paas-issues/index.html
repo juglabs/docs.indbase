@@ -53,6 +53,14 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Issues</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#problems-with-cloud-service-providers-aws-gcp-etc">Problems with Cloud Service Providers - AWS, GCP etc</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#user-experience">User Experience</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#managing-kubernetes">Managing Kubernetes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#things-to-take-care-security">Things to take care - Security</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="" href="../../../nice-articles.md">URLs</a>
@@ -82,8 +90,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="header2">Header2</h2>
-<p>Problems with Cloud Service Providers - AWS, GCP etc</p>
+                <h1 id="issues-to-keep-track">Issues to keep track</h1>
+<h2 id="problems-with-cloud-service-providers-aws-gcp-etc">Problems with Cloud Service Providers - AWS, GCP etc</h2>
 <ul>
 <li>Stripe in its initial days was engaging 20% of their engineering team on managing AWS infrastructure. Its about the same in other 
 companies also</li>
@@ -102,21 +110,27 @@ companies also</li>
 </ul>
 </li>
 </ul>
-<p>User Experience
-- Lot of IN-PRODUCT GUIDANCE
-- Information architecture work
-- Lot of design, UI/UX 
-- Lot of sensible defaults
-- Customer feedback
-- Good logs, Good Documents, Good Error Messageas are key</p>
-<p>KUBERNETES
-- Kubernetes does a good job with container orchestration
-- Problem with K8 - surface area of K8 is massive - even to do a simple thing you have to understand 10 different concepts
-- Give people the flexibility of Kubernetes without having to understand things </p>
-<p>Things to take care
-- As your product becomes popular, DDoS attacks become common - and not just at the HTTP layer, but at L4 as well, at the TCP layer
-- So if you are dealing with bare metal, then you have to work about L3,L4, application level attacks
-- So RENDER didn't do bare metal, they use AWS, GCP, CloudFlare because they've dealt with these problems before</p>
+<h2 id="user-experience">User Experience</h2>
+<ul>
+<li>Lot of IN-PRODUCT GUIDANCE</li>
+<li>Information architecture work</li>
+<li>Lot of design, UI/UX </li>
+<li>Lot of sensible defaults</li>
+<li>Customer feedback</li>
+<li>Good logs, Good Documents, Good Error Messageas are key</li>
+</ul>
+<h2 id="managing-kubernetes">Managing Kubernetes</h2>
+<ul>
+<li>Kubernetes does a good job with container orchestration</li>
+<li>Problem with K8 - surface area of K8 is massive - even to do a simple thing you have to understand 10 different concepts</li>
+<li>Give people the flexibility of Kubernetes without having to understand things </li>
+</ul>
+<h2 id="things-to-take-care-security">Things to take care - Security</h2>
+<ul>
+<li>As your product becomes popular, DDoS attacks become common - and not just at the HTTP layer, but at L4 as well, at the TCP layer</li>
+<li>So if you are dealing with bare metal, then you have to work about L3,L4, application level attacks</li>
+<li>So RENDER didn't do bare metal, they use AWS, GCP, CloudFlare because they've dealt with these problems before</li>
+</ul>
               
             </div>
           </div><footer>
