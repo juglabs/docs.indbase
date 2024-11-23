@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Basics - Indbase</title>
+    <title>Architecture - Indbase</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Basics";
-        var mkdocs_page_input_path = "paas/basics/paas-basics.md";
+        var mkdocs_page_name = "Architecture";
+        var mkdocs_page_input_path = "paas/architecture/architecture.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -49,13 +49,15 @@
               </ul>
               <p class="caption"><span class="caption-text">PaaS</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Basics</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/paas-basics/">Basics</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../issues/paas-issues/">Issues</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/architecture/">Architecture</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Architecture</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#upload-service">Upload Service</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="" href="../../url.md">URLs</a>
                   </li>
@@ -75,7 +77,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">PaaS</li>
-      <li class="breadcrumb-item active">Basics</li>
+      <li class="breadcrumb-item active">Architecture</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -84,16 +86,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="paas-gyaan">PaaS Gyaan</h1>
-<p>When you're tiny, margins should not be what you focus on. When you'are tiny, you should be focused on creating customer value.</p>
-<p>Bill Gates said something along the lines of “A platform is when the customer’s value exceeds the creator’s value.” The person who created the platform gets something back out of it, they get financial gain or whatever, but the people who build on top of it get so much more value out of what they’ve built. And that’s a platform.</p>
-<p>Multi-tenant Kubernetes clusters at scale, at their scale, for a lot of customers… Because that is something that has been really, really hard for even a single company.</p>
+                <h1 id="indbasecom-architecture">Indbase.com Architecture</h1>
+<h2 id="upload-service">Upload Service</h2>
+<p><img alt="Diagram" src="../../../diagrams/upload-service.svg" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../../about/" class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../issues/paas-issues/" class="btn btn-neutral float-right" title="Issues">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../issues/paas-issues/" class="btn btn-neutral float-left" title="Issues"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -116,10 +116,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../../about/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../issues/paas-issues/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../../issues/paas-issues/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
