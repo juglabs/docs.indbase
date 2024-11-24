@@ -1,0 +1,12 @@
+@startuml
+start
+:{{\nsalt\n{Login with Github}\n}};
+-> Successful login;
+:{{\nsalt\n{^"DASHBOARD"\nDeploy App\n[Github]|[Upload files]}\n}};
+-> Select Repo/Files;
+:{{\nsalt\n{^"CODE SCAN"\n[X]Language\n[X]Framework\n[X]Config files\n[X]Env variables\n[X]Build files if any}\n}};
+->Generate Code Scan Summary;
+:Prepare Dockerfile \n for Build service;
+:Upload Code + Dockerfile \n to Cloud Storage <&cloud-upload>;
+:Publish event \n to Pub/Sub;
+@enduml
