@@ -1,0 +1,15 @@
+@startuml
+(Upload service) --> (Build service)
+(Build service) --> (Deploy service)
+(Deploy service) <--> (Infra Provisioning)
+(Observability service) <--> (Deploy service)
+(Infra Provisioning service) <--> (Observability service)
+(Domain Name Management) <--> (Deploy service)
+(Dashboard) <--> (Upload service)
+(Dashboard) <--> (Build service)
+(Dashboard) <--> (Deploy service)
+(Dashboard) <--> (Infra Provisioning service)
+@enduml
+
+
+

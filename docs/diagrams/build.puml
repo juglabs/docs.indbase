@@ -1,0 +1,8 @@
+@startuml
+:Listen to Upload event;
+-> Event detected;
+:Fetch Repo/Files + \n Dockerfile \n & Store in local dir;
+:Build Docker Image;
+:Push Image to Registry;
+:Publish Event \n to Pub/Sub;
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+:Listen to Build event;
+-> Event detected;
+:Pull Image from Registry;
+:{{\nsalt\n{^"Resource Check"\nCheck if Resources provisioned?\n[X]Servers\n[X]Volumes\n[X]Database\n[X]Redis\n}\n}};
+floating note right: Collect Resource Info \n for Dashboard
+-> OK;
+:Run Container;
+:Deploy Container to Resource;
+:Share end URL;
+floating note right: Collect logs, metrics, traces
+:Start Monitoring;
+@enduml
