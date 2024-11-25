@@ -6,6 +6,7 @@ nav:
     - Basics: paas/basics/paas-basics.md
     - Issues: paas/issues/paas-issues.md
     - Architecture: paas/architecture/architecture.md
+    - Services: paas/services/build-service.md
     - URLs: paas/url.md
 theme:
   name: readthedocs
