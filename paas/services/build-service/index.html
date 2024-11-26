@@ -69,6 +69,8 @@
     </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/tools/">Tools</a>
+                  </li>
                   <li class="toctree-l1"><a class="" href="../../url.md">URLs</a>
                   </li>
               </ul>
@@ -149,18 +151,29 @@ customer user experience vis-a-vis verce, netlify, heroku etc. Fly.io comes clos
 </tbody>
 </table>
 <p>Interestingly, Fly.io does little differently. They do images but not Docker! They unwrap image layer by layer while running container- something of that sort?</p>
+<p>Fly.io's build service works like this:</p>
+<ol>
+<li>First it checks if there is a Dockerfile along with the code, so that image can be built right away without the help of Buildpacks</li>
+<li>If no Dockerfile present, Buildpacks takes over and auto scans the code, detect language and framework, download the dependencies, build image </li>
+<li>If readily built image is provided, then its used to deploy the application.</li>
+</ol>
+<p>In the interest of time and to avoid depending on external software like Buildpacks to build the application, it's wiser to write your own auto scan code -&gt; prepare Dockerfile -&gt; Build image. </p>
+<p>And it's not that complicated. Just scan for the relevant config files like <strong>package.json (react), gemfile(Ruby), index.js or app.js(react), requirements.txt (Python), composer.json(for PHP/Laravel/Symfony), pom.xml or build.gradle (Java), packages.config (.NET)</strong> etc</p>
 <h4 id="questions">Questions</h4>
 <ol>
 <li>How to increase the Build speed?</li>
 <li>How to minimize the Build Image size? Because buildpacks image sizes are in general large. </li>
 <li>How to make Build process reliable?</li>
-<li>What are the various options? </li>
+<li>What are the various options?</li>
+<li>How to manage secrets during image build?</li>
+<li>How to add Volumes, Databases, Storage to the app? </li>
 </ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../../architecture/architecture/" class="btn btn-neutral float-left" title="Architecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../tools/tools/" class="btn btn-neutral float-right" title="Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -185,6 +198,8 @@ customer user experience vis-a-vis verce, netlify, heroku etc. Fly.io comes clos
     
       <span><a href="../../architecture/architecture/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
+    
+      <span><a href="../../../tools/tools/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
